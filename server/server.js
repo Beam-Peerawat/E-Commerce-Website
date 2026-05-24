@@ -8,7 +8,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: 'https://e-commerce-website-for-portfolio.vercel.app',
+  origin: 'e-commerce-website-six-lime.vercel.app',
 }));
 app.use(express.json());
 
