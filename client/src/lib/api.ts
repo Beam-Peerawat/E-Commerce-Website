@@ -3,7 +3,7 @@ import { getStoredToken } from '@/lib/authStorage';
 
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL ||
-  'https://e-commerce-website-for-portfolio.onrender.com/api';
+  'https://e-commerce-website-hoid.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
