@@ -2,7 +2,7 @@ const Product = require('../models/Product');
 
 exports.getProducts = async (req, res) => {
   try {
-    const { search, filter, sort, limit } = req.query;
+    const { search, filter, sort, limit, category } = req.query;
     let query = {};
 
     if (search) {
@@ -10,6 +10,9 @@ exports.getProducts = async (req, res) => {
     }
     if (filter === 'sale') {
       query.priceDiscount = { $gt: 0 };
+    }
+    if (category) {
+      query.category = category;
     }
 
     let queryBuilder = Product.find(query);
