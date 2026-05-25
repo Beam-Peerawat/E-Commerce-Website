@@ -36,16 +36,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Side: Image Placeholder */}
-        <div className="md:w-1/2 h-[400px] md:h-[500px] w-full bg-gray-300 relative">
-          <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-            {/* คุณสามารถเปลี่ยนเป็นรูปภาพสินค้าที่หลากหลายได้ที่นี่ */}
-            General Shopping Placeholder
-          </div>
+        {/* Right Side: Featured Image */}
+        <div className="md:w-1/2 h-[400px] md:h-[500px] w-full relative">
+          <img 
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1200" 
+            alt="Shopping Lifestyle"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
-      {/* Category Bar ( แทนที่ Brand Bar เดิม) */}
+      {/* Category Bar */}
       <div className="bg-black py-8 w-full">
         <div className="w-full flex flex-wrap justify-center gap-10 md:gap-20 text-white font-bold text-xl md:text-2xl px-4">
           <span>ELECTRONICS</span>
