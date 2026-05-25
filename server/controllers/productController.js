@@ -19,6 +19,8 @@ exports.getProducts = async (req, res) => {
 
     if (sort === 'newest') {
       queryBuilder = queryBuilder.sort({ createdAt: -1 });
+    } else if (sort === 'top') {
+      queryBuilder = queryBuilder.sort({ price: -1 });
     }
 
     if (limit) {

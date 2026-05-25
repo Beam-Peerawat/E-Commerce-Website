@@ -10,7 +10,11 @@ function ViewAllContent() {
   const [products, setProducts] = useState([]);
   
   useEffect(() => {
-    productAPI.getAll({ sort: type === 'new-arrivals' ? 'newest' : undefined }).then(res => setProducts(res.data));
+    let sortValue = undefined;
+    if (type === 'new-arrivals') sortValue = 'newest';
+    else if (type === 'top-selling') sortValue = 'top';
+
+    productAPI.getAll({ sort: sortValue }).then(res => setProducts(res.data));
   }, [type]);
 
   return (
