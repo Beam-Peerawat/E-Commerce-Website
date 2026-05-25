@@ -173,7 +173,10 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <div className='flex gap-4'><Link href="/login" className="text-sm font-medium">Login</Link><Link href="/register" className="bg-black text-white text-sm px-6 py-2 rounded-full font-medium">Register</Link></div>
+            <div className='flex items-center gap-4'>
+                <Link href="/login" className="text-sm font-medium">Login</Link>
+                <Link href="/register" className="bg-black text-white text-sm px-6 py-2 rounded-full font-medium">Register</Link>
+            </div>
           )}
         </div>
       </div>
